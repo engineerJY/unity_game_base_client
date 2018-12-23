@@ -10,9 +10,13 @@ namespace GameBase
     /// </summary>
     public class SceneBase : MonoBehaviour, ISceneBase 
     {
+        [SerializeField]
+        FadeObject fadeObject;
+
         public void Awake()
         {
             Debug.Log("Awake base");
+            
         }
 
         public void OnEnable()
@@ -20,9 +24,10 @@ namespace GameBase
             Debug.Log("OnEnable base");
         }
         
-        public void Start()
+        public IEnumerator Start()
         {
             Debug.Log("Start base");
+            yield return StartCoroutine(fadeObject.FadeIn());
         }
 
         public void Update()
@@ -34,5 +39,16 @@ namespace GameBase
         {
             //Debug.Log("LateUpdate");
         }
+
+        public IEnumerator ChangeScene(string scene)
+        {
+            yield return StartCoroutine(fadeObject.FadeOut());
+
+            SceneManager.LoadScene(scene, LoadSceneMode.Single);
+
+            yield return null;
+        }
+        
+
     }
 }

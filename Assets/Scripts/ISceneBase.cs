@@ -14,7 +14,7 @@ namespace GameBase
 
         void OnEnable();
 
-        void Start();
+        IEnumerator Start();
 
         void Update();
 

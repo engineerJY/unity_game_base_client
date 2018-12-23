@@ -19,16 +19,18 @@ namespace GameBase
             Debug.Log("OnEnable 1");
         }
 
-        new void Start()
+        new IEnumerator Start()
         {
-            base.Start();
+            yield return StartCoroutine(base.Start());
             Debug.Log("Start 1");
+
+            yield return null;
         }
 
         public void a()
         {
             
-            StartCoroutine(LoadYourAsyncScene());
+            StartCoroutine(ChangeScene("SceneTest2"));
         }
 
         public void b()
