@@ -35,7 +35,9 @@ namespace GameBase
 
         public void b()
         {
-            SceneManager.LoadScene("SceneTest3", LoadSceneMode.Additive);
+            //SceneManager.LoadScene("SceneTest3", LoadSceneMode.Additive);
+
+            GameStatic.CreatePopUp("PopUpTest1");
         }
 
         IEnumerator LoadYourAsyncScene()
