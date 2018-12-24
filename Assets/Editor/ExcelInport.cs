@@ -28,6 +28,11 @@ public class ExcelInport : EditorWindow
         //toggle をマウスでクリックして値を変更する
         toggleValue = EditorGUILayout.ToggleLeft("Toggle", toggleValue);
 
+        if(GUILayout.Button("Button"))
+        {
+            Debug.Log("button clicked");
+        }
+
         //toggleValue の値が変更されるたびに true になる
         if (EditorGUI.EndChangeCheck())
         {
