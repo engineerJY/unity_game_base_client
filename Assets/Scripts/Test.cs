@@ -21,7 +21,7 @@ public class Test : MonoBehaviour {
     void SuccessCallBack(string result)
     {
         Debug.Log(result);
-        User user = WebAPIManager.JsonResult<User>(result);
+        //User user = WebAPIManager.JsonResult<User>(result);
     }
 
     // Update is called once per frame
