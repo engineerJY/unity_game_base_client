@@ -10,7 +10,7 @@ namespace GameBase
         new void Awake()
         {
             base.Awake();
-            Debug.Log("Awake 1 ");
+            Debug.Log("Awake 1  ");
         }
 
         new void OnEnable()
