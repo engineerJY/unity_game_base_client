@@ -13,6 +13,7 @@ namespace GameBase
         public string magic { get { return "UserSettings_180101"; } }
         public int version { get { return 1; } }
         public string fileName { get { return "/UserSettings"; } }
+        public string filePath { get { return "/UserSettings"; } }
         public System.Type type { get { return typeof(UserSettings); } }
         public FORMAT format { get { return this.format_; } set { this.format_ = value; } }
         public bool encrypt { get { return this.encrypt_; } set { this.encrypt_ = value; } }
