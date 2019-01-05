@@ -7,7 +7,7 @@ using UnityEditor;
 
 public class AssetBundleBuild : MonoBehaviour {
 
-	[MenuItem("Assets/Build AssetBundle")]
+	[MenuItem("Tools/Build AssetBundle")]
 	public static void Build () {
 		var assetBundleDirectory = "./AssetBundleBuild";
 		if (!Directory.Exists (assetBundleDirectory)) {
