@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestMaster : ScriptableObject {
+public class QuestMaster : ScriptableObject, BaseMaster
+{
 
     public List<Sheet> sheets = new List<Sheet>();
 
@@ -19,5 +20,10 @@ public class QuestMaster : ScriptableObject {
         public int id;
         public string questname;
         public string type;
+    }
+
+    public void CreateInstans()
+    {
+        Debug.Log("instans create.");
     }
 }
